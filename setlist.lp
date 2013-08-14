@@ -1,5 +1,5 @@
 % Generate rules
-% Below is easy way to write, but does not scale since you have to manually add each slot
+% Below is the easy way to write, but does not scale since you have to manually add each slot
 %setlist(0, S) v setlist(1, S) v setlist(2, S) v setlist(3, S) v setlist(4, S) :- song(S).
 setlist(T, S) :- not -setlist(T, S), time(T), song(S).
 -setlist(T, S) :- setlist(T, SS), S != SS, time(T), song(S), song(SS).
