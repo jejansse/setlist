@@ -1,0 +1,12 @@
+Set list generate
+=================
+
+A friend of mine who plays in the progressive metal band Vermilion asked how he could easily generate a set list based on a number of constraints, such as limiting the number of guitar switching during songs. The result is this Answer Set Program that should work with DLV.
+
+# Running it:
+
+Using (DLV)[http://www.dlvsystem.com/] you can simply run it by doing
+
+    ./dlv facts.lp setlist.lp -filter='setlist' -n=0
+
+To alter the number of songs to select, the songs that can be selected and the guitars per song just alter the facts.lp file.
